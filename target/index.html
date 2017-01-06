@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="elm.js"></script>
+	<style>
+		*, *:before, *:after {
+			box-sizing: border-box;
+		}
+		html, body, .container {
+			height: 100%;
+			margin: 0;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			align-items: stretch;
+			align-content: center;
+			justify-content: center;
+
+			border: 1px solid #000000;
+		}
+		.input {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			align-items: center;
+			align-content: center;
+			justify-content: flex-end;
+			transition: flex 1s ease;
+			
+			background-color: red;
+			border: 1px solid #000000;
+		}
+		.input-box {
+			flex: 0 0 auto;
+			width: 50%;
+			text-align: center;
+
+			background-color: white;
+		}
+		.results {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			align-items: stretch;
+			align-content: center;
+			justify-content: flex-start;
+			overflow: auto; /* scrollable results */
+
+			background-color: green;
+		}
+		.result {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			min-height: min-content; /* scrollable results */
+		}
+		.letter {
+			flex: 1;
+			text-align: right;
+			
+			background-color: grey;
+		}
+		.word {
+			flex: 1;
+			text-align: left;
+			
+			background-color: blue;
+		}
+	</style>
+</head>
+
+<body>
+    <script type="text/javascript">
+    	Elm.Main.fullscreen();
+    </script>
+</body>
+</html>
