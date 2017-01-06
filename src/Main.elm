@@ -75,12 +75,11 @@ update msg model =
                 inputChars = String.toList input
                 entries = makeEntries inputChars model.entries
                 entryStyles = initNewEntryStyles entries model.entryStyles
-                x = Debug.log "C" <| List.length entryStyles
                 newEntryCount = List.length (List.filter .isNew entries)
             in
                 { model
                 | input = input
-                , entries = Debug.log "" entries
+                , entries = entries
                 , entryStyles = entryStyles
                 } ! [ makeCmd AnimateInput ]
 
