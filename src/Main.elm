@@ -328,6 +328,16 @@ viewEntry entry cssStyle =
     div (Animation.render cssStyle ++
             [ class "result" ]
         )
-        [ div [ class "letter" ] [ text (toString entry.letter) ]
-        , div [ class "word" ] [ text entry.word ]
+        [ div
+            [ class "letter-box" ]
+            [ div
+                [ class "letter"]
+                [ text (String.fromChar entry.letter) ]
+            ]
+        , div
+            [ class "word-box" ]
+            [ div
+                [ class "word" ]
+                [ text entry.word ]
+            ]
         ]
