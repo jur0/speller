@@ -38,12 +38,10 @@ body {
 
 .input-box {
     flex: 0 0 auto;
-    width: 50%;
     text-align: center;
     background: transparent;
     border: 0;
     border-bottom: 0.15em solid #f4f5f7;
-    font-size: 1.8em;
     color: #f4f5f7;
 }
 
@@ -88,4 +86,25 @@ body {
     padding-left: 0.3em;
     font-size: 1.2em;
     color: #f4f5f7;
+}
+
+@media (max-width: 767px) {
+    .input-box {
+        width: 80%;
+        font-size: 1.6em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .input-box {
+        width: 65%;
+        font-size: 1.7em;
+    }
+}
+
+@media (min-width: 992px) {
+    .input-box {
+        width: 55%;
+        font-size: 1.8em;
+    }
 }
