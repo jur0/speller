@@ -140,7 +140,7 @@ toPhonetic c =
         'u' -> "uniform"
         'v' -> "victor"
         'w' -> "whiskey"
-        'x' -> "xray"
+        'x' -> "x-ray"
         'y' -> "yankee"
         'z' -> "zulu"
         '1' -> "one"
