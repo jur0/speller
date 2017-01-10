@@ -8,11 +8,14 @@
 
 html, body, .container {
     height: 100%;
-    margin: 0;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
     background-color: #5c5160;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -39,10 +42,30 @@ body {
 .input-box {
     flex: 0 0 auto;
     text-align: center;
-    background: transparent;
+    padding: 1px 1px 5px 1px;
     border: 0;
     border-bottom: 0.15em solid #f4f5f7;
+    font-size: 2em;
+    background: transparent;
     color: #f4f5f7;
+}
+
+@media (max-width: 767px) {
+    .input-box {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .input-box {
+        width: 65%;
+    }
+}
+
+@media (min-width: 992px) {
+    .input-box {
+        width: 55%;
+    }
 }
 
 .results {
@@ -78,33 +101,12 @@ body {
 
 .letter {
     padding-right: 0.3em;
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #f7aaae;
 }
 
 .word {
     padding-left: 0.3em;
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #f4f5f7;
-}
-
-@media (max-width: 767px) {
-    .input-box {
-        width: 80%;
-        font-size: 1.6em;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .input-box {
-        width: 65%;
-        font-size: 1.7em;
-    }
-}
-
-@media (min-width: 992px) {
-    .input-box {
-        width: 55%;
-        font-size: 1.8em;
-    }
 }

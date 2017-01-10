@@ -1,10 +1,8 @@
 Speller
 =======
 
-  1. Compile elm:
+  1. `npm install`
 
-	```bash
-	./build.sh
-	```
+  2. `elm package install`
 
-  2. Open `target/index.html`
+  3. Open `build/index.html`

@@ -1,2 +1,3 @@
+build
 elm-stuff
-target/elm.js
+node_modules

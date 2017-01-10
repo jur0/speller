@@ -1,0 +1,33 @@
+{
+  "name": "speller",
+  "version": "0.1.0",
+  "description": "Phonetic alphabet speller",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jur0/speller.git"
+  },
+  "keywords": [
+    "elm",
+    "speller"
+  ],
+  "author": "Juraj Hlista",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jur0/speller/issues"
+  },
+  "homepage": "https://github.com/jur0/speller#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "clean-webpack-plugin": "^0.1.15",
+    "css-loader": "^0.26.1",
+    "elm-webpack-loader": "^4.2.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.26.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0"
+  }
+}
