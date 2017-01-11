@@ -40,8 +40,7 @@ common_settings = {
         AutoPrefixer({
             browsers: ['last 2 versions']
         })
-    ],
-
+    ]
 }
 
 if (environment === 'development') {
@@ -66,14 +65,14 @@ if (environment === 'development') {
                     test: /\.elm$/,
                     exclude: [
                         /elm-stuff/,
-                        /node_modules/,
+                        /node_modules/
                     ],
                     loaders: [
                         'elm-hot-loader',
                         'elm-webpack-loader?verbose=true&warn=true&debug=false'
                     ]
                 }
-            ],
+            ]
         },
 
         devServer: {
@@ -84,7 +83,7 @@ if (environment === 'development') {
     environment_settings = {
         output: {
             path: productionOutputPath,
-            filename: '[name]-[hash].min.js',
+            filename: '[name]-[hash].min.js'
         },
 
         plugins: [
@@ -100,7 +99,6 @@ if (environment === 'development') {
             })
         ],
 
-
         module: {
             loaders: [{
                     test: /\.css$/,
@@ -110,11 +108,11 @@ if (environment === 'development') {
                     test: /\.elm$/,
                     exclude: [
                         /elm-stuff/,
-                        /node_modules/,
+                        /node_modules/
                     ],
                     loader: 'elm-webpack-loader'
                 }
-            ],
+            ]
         }
     }
 }
