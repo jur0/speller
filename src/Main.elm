@@ -4,7 +4,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Char
-import String 
+import String
 import Task
 import Animation
 
@@ -98,7 +98,7 @@ update msg model =
                 } ! []
 
 
-makeEntries : List Char -> List Entry -> List Entry 
+makeEntries : List Char -> List Entry -> List Entry
 makeEntries chars entries =
     case (chars, entries) of
         (c :: cs, {isNew, letter, word} :: es) ->
@@ -305,7 +305,7 @@ animateEntry cssStyle =
 view : Model -> Html Msg
 view model =
     div [ class "container" ]
-        [ div 
+        [ div
             (Animation.render model.inputStyle ++
                 [ class "input" ]
             )
@@ -313,7 +313,7 @@ view model =
                 [ class "input-box"
                 , autofocus True
                 , onInput (\s -> UpdateInput s)
-                ] 
+                ]
                 [ ]
             ]
         , div
