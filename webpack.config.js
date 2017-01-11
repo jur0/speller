@@ -4,9 +4,11 @@ var HtmlPlugin = require('html-webpack-plugin');
 var Path = require( 'path' );
 var Webpack = require('webpack');
 var WebpackMerge = require('webpack-merge');
+var WriteFilePlugin = require('write-file-webpack-plugin');
 
 var entryPath = Path.join(__dirname, 'src/app.js');
-var outputPath = Path.join(__dirname, 'build');
+var developmentOutputPath = Path.join(__dirname, 'build');
+var productionOutputPath = '../speller-gh-pages';
 var common_settings;
 var environment_settings;
 var environment;
@@ -45,13 +47,14 @@ common_settings = {
 if (environment === 'development') {
     environment_settings = {
         output: {
-            path: outputPath,
+            path: developmentOutputPath,
             filename: '[name].js',
             publicPath: '/'
         },
 
         plugins: [
-            new ExtractTextPlugin('app.css')
+            new ExtractTextPlugin('app.css'),
+            new WriteFilePlugin()
         ],
 
         module: {
@@ -72,11 +75,15 @@ if (environment === 'development') {
                 }
             ],
         },
+
+        devServer: {
+            outputPath: developmentOutputPath
+        }
     }
 } else if (environment === 'production') {
     environment_settings = {
         output: {
-            path: outputPath,
+            path: productionOutputPath,
             filename: '[name]-[hash].min.js',
         },
 
