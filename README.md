@@ -1,8 +1,21 @@
 Speller
 =======
 
-  1. `npm install`
+Install `npm` and `elm` packages:
 
-  2. `elm package install`
+```bash
+npm install
+elm package install --yes
+```
 
-  3. Open `build/index.html`
+* To build production release:
+
+  ```bash
+  npm run-script build
+  ```
+
+* To start development server (`http://localhost:8000/webpack-dev/server`):
+
+  ```bash
+  npm run-script start
+  ```
