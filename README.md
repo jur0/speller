@@ -14,7 +14,7 @@ elm package install --yes
   npm run-script build
   ```
 
-* To start development server (`http://localhost:8000/webpack-dev/server`):
+* To start development server (`http://localhost:8000/webpack-dev-server`):
 
   ```bash
   npm run-script start
