@@ -112,10 +112,7 @@ if (environment === 'development') {
                         /elm-stuff/,
                         /node_modules/,
                     ],
-                    loaders: [
-                        'elm-hot-loader',
-                        'elm-webpack-loader?verbose=true&warn=true&debug=false'
-                    ]
+                    loader: 'elm-webpack-loader'
                 }
             ],
         }
